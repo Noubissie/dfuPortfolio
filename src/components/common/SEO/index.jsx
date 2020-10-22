@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Thumbnail from 'assets/thumbnail/thumbnail.png';
+import Logo from "assets/thumbnail/DFULOGO.png"
 import {
   url,
   defaultDescription,
@@ -20,7 +21,7 @@ export const SEO = ({ title = defaultTitle, description = defaultDescription, lo
 		"@type": "Organization",
 		"legalName": "${legalName}",
 		"url": "${url}",
-		"logo": "${logo}",
+		"logo": "${Logo}",
 		"foundingDate": "${foundingDate}",
 		"founders": [{
 			"@type": "Person",

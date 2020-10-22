@@ -4,14 +4,15 @@ import { ThemeContext } from 'providers/ThemeProvider';
 import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Brand } from './styles';
-
+import dfulogo from  "assets/thumbnail/DFULOGO.png"
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
     <Wrapper as={Container}>
       <Brand as={Link} to="/" theme={theme}>
-        John Doe
+        <img src={dfulogo} alt="logo image" height="400px" width="400px"/>
+        DFU
       </Brand>
       <NavbarLinks desktop />
     </Wrapper>
