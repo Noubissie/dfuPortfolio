@@ -44,7 +44,7 @@ export const Projects = () => {
   //     }
   //   `
   // );
-  return (
+  return ( 
     <Wrapper as={Container} id="projects">
       <h2>Projects</h2>
       <Grid>

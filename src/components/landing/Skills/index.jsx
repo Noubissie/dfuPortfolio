@@ -1,47 +1,68 @@
 import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Button } from 'components/common';
+import { Container, Card, TitleWrap, Button} from 'components/common';
 import dev from 'assets/illustrations/skills.svg';
-import members from "assets/thumbnail/PHOTO.png"
-import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
+import pic_Landry from "assets/thumbnail/PHOTO.png"
+import pic_etape from "assets/thumbnail/etape pic.svg"
+// import * as picture from "assets/thumbnail/PHOTO.png"
+import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
 
 export const Skills = () => {
   const { theme } = useContext(ThemeContext);
-
+  const members_profile = [
+    {
+      name:"Noubissie Landry",
+      description:"Financial secretary",
+      url:pic_Landry
+    },
+    {
+      name:"Etape Peter",
+      description:"Personel Managing Director",
+      url:pic_etape
+    }
+  ]
   return (
-    <Wrapper id="about">
-      <SkillsWrapper as={Container}>
-        
-        <Details theme={theme}>
-          <h1>More about us</h1> 
-          <p>
-            <span >
-              <img width="30%" height="500px" src={members}/>
-              <h5>Financial Secretary</h5>
-              <h4>Noubissie Landry</h4>
-            </span>
-                    
-              {/* <img width="30%" src="https://www.vectorlogo.zone/logos/javascript/javascript-horizontal.svg"/> */}
-              {/* <img width="30%" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-ar21.svg"/>
-              <br />
-              <img width="30%" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"/>
-              <img width="30%" src="https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-ar21.svg"/>
-              <img width="30%" src="https://www.vectorlogo.zone/logos/json/json-ar21.svg"/>
-              <br />
-              <img width="30%" src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"/>
-              <img width="30%" src="https://www.vectorlogo.zone/logos/sqlite/sqlite-ar21.svg"/>
-              <img width="30%" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg"/>
-              <br />
-              <img width="30%" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"/>
-              <img width="30%" src="https://www.vectorlogo.zone/logos/yaml/yaml-ar21.svg"/>
-              <img width="30%" src="https://www.vectorlogo.zone/logos/docker/docker-official.svg"/> */}
-          </p>
-          <Button as={AnchorLink} href="#contact">
-            contact us
-          </Button>
-        </Details>
-      </SkillsWrapper>
+
+
+<Wrapper as={Container} id="projects">
+      <h2>Projects</h2>
+      <Grid>
+        {members_profile.map(profile => (
+          
+            <Card theme={theme}>
+              
+              <TitleWrap>
+                <Stats theme={theme}>
+                  <div>
+                    {/* <Star color={theme === "light" ? "#000" : "#fff"} /> */}
+                    <span><img src={profile.url} alt="image" /></span>
+                  </div>
+                  
+                </Stats>
+                <Stats theme={theme}>
+                  <Languages>
+                    {/* {
+                      profile.languages.profiles.map(({ id, name }) => (
+                        <span key={id}>
+                          {name}
+                        </span>
+                      ))
+                    } */}
+                  </Languages>
+                </Stats>
+              </TitleWrap>
+              <Content>
+                <h4>{profile.name}</h4>
+                <p>{profile.description}</p>
+              </Content>
+            </Card>
+         
+        ))} 
+      </Grid>
+      <Button as={AnchorLink} href="#contact">
+          contact us
+      </Button>
     </Wrapper>
   );
 };
