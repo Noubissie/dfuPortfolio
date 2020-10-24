@@ -54,8 +54,11 @@ export const SEO = ({ title = defaultTitle, description = defaultDescription, lo
     <Helmet>
       <meta name="description" content={description} />
       <meta name="image" content={Thumbnail} />
+      <meta name="name" content={defaultTitle}/>
+      <meta name="short-name" content="DFU"/>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black"></meta>
 
-      <meta property="og:url" content={`${url}${location}/?ref=smakosh.com`} />
+      <meta property="og:url" content={``} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

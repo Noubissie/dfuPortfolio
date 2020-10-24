@@ -48,7 +48,7 @@ export const Stats = styled.div`
   div {
     display: flex;
     &:first-child {
-      margin-right: 0.5rem;
+      margin-right: 0.2rem;
     }
 
     img {
@@ -61,7 +61,7 @@ export const Stats = styled.div`
 
     span {
       color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
-      margin-left: 0.5rem;
+      margin-left: 0.3rem;
     }
   }
 `;

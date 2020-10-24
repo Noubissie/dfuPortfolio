@@ -25,8 +25,8 @@ export const Skills = () => {
   return (
 
 
-<Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
+<Wrapper as={Container} id="about">
+      <h2>About Us</h2>
       <Grid>
         {members_profile.map(profile => (
           

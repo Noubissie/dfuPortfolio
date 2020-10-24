@@ -2,7 +2,7 @@ module.exports = {
   defaultTitle: 'DFU',
   logo: '',
   author: 'NOUBISSIE',
-  url: '',
+  url: 'https://dfu-dflax.vercel.app',
   legalName: 'DFU',
   defaultDescription: 'We are the Dynamic Financial Union!',
   socialLinks: {
@@ -14,7 +14,7 @@ module.exports = {
     google: '',
   },
   googleAnalyticsID: 'UA-88875900-4',
-  themeColor: '#6b63ff',
+  themeColor: 'blue',
   backgroundColor: '#6b63ff',
   social: {
     facebook: '',
