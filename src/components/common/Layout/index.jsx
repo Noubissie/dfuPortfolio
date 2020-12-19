@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Global theme={theme} />
-      {children}
+        {children}
       <Footer />
     </>
   );
